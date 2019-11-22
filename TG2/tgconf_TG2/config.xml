@@ -1,0 +1,18 @@
+<taurusgui_config>
+  <GUI_NAME>TG2</GUI_NAME>
+  <ORGANIZATION>TAURUS</ORGANIZATION>
+  <CUSTOM_LOGO/>
+  <PanelDescriptions>
+    <PanelDescription>
+  <name>m</name>
+  <classname>TaurusForm</classname>
+  <modulename/>
+  <widgetname/>
+  <floating>True</floating>
+  <sharedDataWrite/>
+  <sharedDataRead/>
+  <model>tango://_gateway:10000/device/PhyMOTION/m61</model>
+</PanelDescription>
+  </PanelDescriptions>
+  <MONITOR></MONITOR>
+</taurusgui_config>

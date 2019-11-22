@@ -1,0 +1,9 @@
+Project created by AppSettingsWizard on 2019-11-20T17:07:13.040444
+XML Config file created: "/home/a/TEX-2/GUI/TG/tgconf_TG/config.xml"
+Python config file created: "/home/a/TEX-2/GUI/TG/tgconf_TG/config.py"
+python init file created: "/home/a/TEX-2/GUI/TG/tgconf_TG/__init__.py"
+Application project was successfully created.You can find the files in: "/home/a/TEX-2/GUI/TG"
+Tip: You can install it with:
+	pip install /home/a/TEX-2/GUI/TG
+Tip: And then run the application with:
+	 TG
