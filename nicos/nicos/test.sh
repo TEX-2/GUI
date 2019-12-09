@@ -1,5 +1,5 @@
 #!/bin/bash
-TAG=nicos:latest
+TAG=pshcyrill/nicos:latest
 BIN=
 PATH_TO_INSTRUMENT=/data/Soft/NICOS/docker/compose/nicos_pnpi
 xhost +local:

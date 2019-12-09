@@ -7,6 +7,7 @@ services:
         - "14869:14869"
        volumes:
         - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
+        - ./log:/usr/src/nicos/log
        environment:
         - INSTRUMENT=nicos_pnpi.demo
     nicos-daemon:
@@ -14,5 +15,24 @@ services:
        network_mode: host
        volumes:
         - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
+        - ./log:/usr/src/nicos/log
+       environment:
+        - INSTRUMENT=nicos_pnpi.demo
+    nicos-poller:
+       image: pshcyrill/nicos-poller:latest
+       network_mode: host
+       volumes:
+        - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
+        - ./data:/data
+        - ./log:/usr/src/nicos/log
+       environment:
+        - INSTRUMENT=nicos_pnpi.demo
+    nicos-elog:
+       image: pshcyrill/nicos-elog:latest
+       network_mode: host
+       volumes:
+        - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
+        - ./data:/data
+        - ./log:/usr/src/nicos/log
        environment:
         - INSTRUMENT=nicos_pnpi.demo
