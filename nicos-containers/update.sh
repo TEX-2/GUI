@@ -2,7 +2,7 @@
 
 REPOSITORY="pshcyrill"
 TAG="test"
-DIRS="nicos nicos-cache nicos-elog nicos-elog nicos-poller nicos-watchdog"
+DIRS="nicos nicos-cache nicos-daemon nicos-elog nicos-poller nicos-watchdog"
 
 for dir in $DIRS
 do
