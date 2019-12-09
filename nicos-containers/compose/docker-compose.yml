@@ -7,7 +7,8 @@ services:
         - "14869:14869"
        volumes:
         - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
-        - ./log:/usr/src/nicos/log
+        - ./log:/log
+        - ./data:/data
        environment:
         - INSTRUMENT=nicos_pnpi.demo
 
@@ -18,7 +19,8 @@ services:
        network_mode: host
        volumes:
         - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
-        - ./log:/usr/src/nicos/log
+        - ./log:/log
+        - ./data:/data
        environment:
         - INSTRUMENT=nicos_pnpi.demo
 
@@ -29,8 +31,8 @@ services:
         - nicos-daemon
        volumes:
         - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
+        - ./log:/log
         - ./data:/data
-        - ./log:/usr/src/nicos/log
        environment:
         - INSTRUMENT=nicos_pnpi.demo
 
@@ -41,8 +43,8 @@ services:
         - nicos-cache
        volumes:
         - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
+        - ./log:/log
         - ./data:/data
-        - ./log:/usr/src/nicos/log
        environment:
         - INSTRUMENT=nicos_pnpi.demo
 
@@ -51,9 +53,10 @@ services:
        network_mode: host
        depends_on:
         - nicos-cache
-       environment:
-        - INSTRUMENT=nicos_pnpi.demo
        volumes:
         - ./nicos_pnpi:/usr/src/nicos/nicos_pnpi
-        - ./log:/usr/src/nicos/log
+        - ./log:/log
+        - ./data:/data
+       environment:
+        - INSTRUMENT=nicos_pnpi.demo
        

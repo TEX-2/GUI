@@ -8,13 +8,13 @@ RUN apt-get install -y python-mysql.connector python-docutils python-serial pyth
 RUN apt-get install -y python-qt4 python-qscintilla2 git
 
 RUN pip install gr && pip install -i http://forge.frm2.tum.de/simple nicos-pyctl --trusted-host forge.frm2.tum.de
-RUN cd /usr/src/ && git clone https://forge.frm2.tum.de/review/frm2/nicos/nicos
+RUN cd /usr/src/ && git clone https://forge.frm2.tum.de/review/frm2/nicos/nicos && cd /
 
 RUN mkdir /usr/src/nicos/nicos_pnpi
 VOLUME /usr/src/nicos/nicos_pnpi
 ENV INSTRUMENT=nicos_pnpi.demo
-RUN mkdir /data && ln -s /data /usr/src/nicos/bin/data
-RUN mkdir /log && ln -s /log /usr/src/nicos/bin/log
+RUN mv /usr/src/nicos/data /data && ln -s /data /usr/src/nicos/data && ln -s /data /usr/src/nicos/bin/data  
+RUN mv /usr/src/nicos/log /log && ln -s /log /usr/src/nicos/log && ln -s /log /usr/src/nicos/bin/log
 VOLUME /data
 VOLUME /log
 

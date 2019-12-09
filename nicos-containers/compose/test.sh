@@ -1,5 +1,5 @@
 #!/bin/bash
-TAG=pshcyrill/nicos:latest
+TAG=pshcyrill/nicos:test
 BIN=
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
