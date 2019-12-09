@@ -1,4 +1,4 @@
-FROM pshcyrill/nicos:latest
+FROM pshcyrill/nicos:test
 
 MAINTAINER pshcyrill@mail.ru
 
